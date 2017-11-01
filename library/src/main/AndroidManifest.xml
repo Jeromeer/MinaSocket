@@ -1,0 +1,20 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="app.socketlib.com.library">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+
+        <service
+            android:name=".service.SocketService"
+            android:label="socketService">
+            <intent-filter android:priority="1000">
+                <action android:name="app.socketlib.com.library.intent.action.SOCKET_CONNECT_SERVICE"></action>
+            </intent-filter>
+
+        </service>
+    </application>
+
+</manifest>
