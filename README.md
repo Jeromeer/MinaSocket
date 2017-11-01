@@ -59,7 +59,7 @@
     }
 ```
 
-######存在问题
+###### 存在问题
 由于每个连接是基于IOSession的,我在初次封装时候,将`SessionManager`写成了单例,
 所以一个service中调用`SessionManager.getInstance().setSeesion(mSession);`,
 设置了session之后,如果再启动另一个service,会将之前的session覆盖,导致当前app中只能同时使用一个socket与服务端通讯,这个问题正在解决..
