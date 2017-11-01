@@ -11,7 +11,7 @@ import app.socketlib.com.library.utils.LogUtil;
 /**
  * author：JianFeng
  * date：2017/8/10 17:41
- * description：
+ * description：心跳监控
  */
 public class KeepAliveRequestTimeoutHandlerImpl implements KeepAliveRequestTimeoutHandler {
 
