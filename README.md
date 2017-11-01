@@ -9,6 +9,12 @@
 * 每次重连的请求会尝试10次,当10次连接不成功,会重新释放所有资源,然后再次重新连接,保证所有资源都为最新(这部分是我在使用过程中,发现如果资源不释放,会出现一些奇怪的问题,比如连接成功发送一次就断开..);
 * 默认使用了Mina的KeepAliveMessageFactory来实现心跳监测,使业务和心跳分开,使前后台不再需要区分心跳包和业务包;
 
+###### 发送和接收服务端数据 gif图
+![发送和接收服务端数据](https://github.com/jianfeng318/MinaSocket/blob/master/picture/socket.gif)
+
+###### 断网和网络恢复之后重新连接
+![](https://github.com/jianfeng318/MinaSocket/blob/master/picture/socket_connect6.gif)
+
 ###### 如何使用
 
 1. 在procject的gradle下加入以下代码
