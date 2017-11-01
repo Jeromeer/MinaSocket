@@ -42,12 +42,13 @@
         ContentServiceHelper.bindService(this, socketConfig);
 ```
 `SocketConfig ` 为配置项,包含了连接服务器的ip,端口,连接超时时间,客户端空闲超时时间,心跳包和心跳回复等,这些都是必须要配置的;然后绑定这个服务
+
 4. 在你要接收服务器数据的页面,去实现`SocketResponseListener`这个接口,然后像这样
 ```
  SessionManager.getInstance().setReceivedResponseListener(this);
 ```
-服务器返回的数据会回调到这里
 
+服务器返回的数据会回调到这里
 
 **注意: 这里的数据,是订阅所有commond返回的所有数据,没有做任何解析,使用者需要在这里将数据解析之后,分发给真正需要显示的页面;**
 
