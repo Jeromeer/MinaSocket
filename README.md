@@ -10,6 +10,7 @@
 * 默认使用了Mina的KeepAliveMessageFactory来实现心跳监测,使业务和心跳分开,使前后台不再需要区分心跳包和业务包;
 
 ###### 发送和接收服务端数据 gif图
+ 图片中,左边是我用一个java写的SocketTest的客户端,模拟服务器,监听192.168.1.174:2345,然后有客户端连接过来之后,输入消息,点击send就可以给客户端发送消息了
 ![发送和接收服务端数据](https://github.com/jianfeng318/MinaSocket/blob/master/picture/socket.gif)
 
 ###### 断网和网络恢复之后重新连接
