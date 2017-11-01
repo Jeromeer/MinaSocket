@@ -8,7 +8,7 @@ import android.util.Log;
  * @description：
  */
 public class LogUtil {
-    private static final boolean isDebug = true;
+    private static final boolean isDebug = false;
     private static final String TAG = "socketlib--->LOG:";
 
     public static void w(String logMessage) {
