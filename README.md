@@ -9,6 +9,13 @@
 * 每次重连的请求会尝试10次,当10次连接不成功,会重新释放所有资源,然后再次重新连接,保证所有资源都为最新(这部分是我在使用过程中,发现如果资源不释放,会出现一些奇怪的问题,比如连接成功发送一次就断开..);
 * 默认使用了Mina的KeepAliveMessageFactory来实现心跳监测,使业务和心跳分开,使前后台不再需要区分心跳包和业务包;
 
+###### 发送和接收服务端数据 gif图
+ 图片中,左边是我用一个java写的SocketTest的客户端,模拟服务器,监听192.168.1.174:2345,然后有客户端连接过来之后,输入消息,点击send就可以给客户端发送消息了
+![发送和接收服务端数据](https://github.com/jianfeng318/MinaSocket/blob/master/picture/socket.gif)
+
+###### 断网和网络恢复之后重新连接
+![](https://github.com/jianfeng318/MinaSocket/blob/master/picture/socket_connect6.gif)
+
 ###### 如何使用
 
 1. 在procject的gradle下加入以下代码
@@ -63,3 +70,5 @@
 由于每个连接是基于IOSession的,我在初次封装时候,将`SessionManager`写成了单例,
 所以一个service中调用`SessionManager.getInstance().setSeesion(mSession);`,
 设置了session之后,如果再启动另一个service,会将之前的session覆盖,导致当前app中只能同时使用一个socket与服务端通讯,这个问题正在解决..
+
+###### [我的简书](http://www.jianshu.com/u/0b440912217a)
