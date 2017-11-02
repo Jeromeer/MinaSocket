@@ -31,7 +31,7 @@
 2. 在app的gradle中加入依赖
 ```
 	dependencies {
-	        compile 'com.github.jianfeng318:SocketLibrary:Socket'
+	compile 'com.github.jianfeng318:MinaSocket:1.0'
 	}
 ```
 3. Socket是基于Service的,所以在你需要启动socket的页面加入如下代码
